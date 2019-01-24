@@ -149,12 +149,11 @@
                                     <fieldset>
                                         <legend>Reviewed <a href="https://eds.myflfamilies.com/DCFFormsInternet/Search/OpenDCFForm.aspx?FormId=73" target="_blank" class="inlineLink">"Rights and Responsibilities"</a> with customer: </legend>
                                         <label for="reviewRRYes" name="reviewRR">Yes</label>
-                                        <input type="radio" id="reviewRRYes" name="reviewRR" value="Yes">
+                                        <input type="radio" id="reviewRRYes" name="reviewRR" value="Yes"  onclick="hideIt('rrWhyNot', this)">
                                         <label for="reviewRRNo" name="reviewRR">No</label>
                                         <input type="radio" id="reviewRRNo" name="reviewRR" value="No" onclick="showMe('rrWhyNot', this)">
                                     </fieldset>
                                     <div id="rrWhyNot" style="display:none">
-                                        
                                         <textarea type="textarea" id="rrWhyNotDis" aria-label="Discuss why 'Rights and Responsibilities' were not reviewed." placeholder="Discuss why 'Rights and Responsibilities' were not reviewed." rows="4" onkeyup="auto_grow(this)"></textarea>
                                     </div>
                                 </div>
