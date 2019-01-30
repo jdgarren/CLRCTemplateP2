@@ -1,0 +1,12 @@
+
+{
+    "port": 3000,
+    "server": {
+      "baseDir": "C:\\Users\\garren-james\\HTML\\CLRCTemplateP2",
+      "index": "CLRCTemplate.html",
+      "serveStaticOptions": {
+        "extensions": ["shtml"]
+    }
+    },
+    "browser": ["chrome"]
+  }

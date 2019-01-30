@@ -1,0 +1,16 @@
+
+{
+    "name": "lite",
+    "version": "1.0.0",
+    "description": "",
+    "main": "CLRCTemplate.html",
+    "scripts": {
+      "start": "lite-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "lite-server": "^2.3.0"
+    }
+  }
