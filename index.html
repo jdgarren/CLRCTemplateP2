@@ -384,7 +384,7 @@
                                 </div>
                                 <div id="abawdDivE0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdEmp30">Is anyone in the household employed, self-employed, volunteering, working minimum of <strong>30</strong> hours weekly or earning weekly wages at least equal to $<span id="incomeSpan"></span>, or monthly $<span id="monthlySpan"></span>. Can be paid or in-kind <strong>(AGPI 21)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdEmp30">Is anyone in the household employed, self-employed, volunteering, working minimum of <strong>120</strong> hours monthly or earning monthly wages at least equal to $<span id="monthlySpan"></span>. Can be paid or in-kind <strong>(AGPI 21)</strong>:</p>
                                     <label for="abawdEName0" id="abawdELabel0"></label>
                                     <input type="checkbox" id="abawdEName0">
                                 </div>
@@ -405,7 +405,7 @@
                                 </div>
                                 <div id="abawdDivG0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdUnfit">Is anyone in the household unable to work at least 20 hours per week, averaged monthly, as a result of being physically or mentally unfit or pending for SSI/SSDI or some other type of disability (temporary or permanent) <strong>(AGPI 15)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdUnfit">Is anyone in the household unable to work at least 80 hours per month as a result of being physically or mentally unfit or pending for SSI/SSDI or some other type of disability (temporary or permanent) <strong>(AGPI 15)</strong>:</p>
                                     <label for="abawdGName0" id="abawdGLabel0"></label>
                                     <input type="checkbox" id="abawdGName0" onclick="showMe('unfitDur', this)">
                                 </div>
@@ -426,7 +426,7 @@
                                 </div>
                                 <div id="abawdDivI0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdEmp20">Is anyone in the household employed, self-employed, or volunteering, working minimum of <strong>20</strong> hours weekly, averaged 80 hours monthly? Can be paid or in-kind. <strong>(AGPI 18 N)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdEmp20">Is anyone in the household employed, self-employed, or volunteering, working minimum of <strong>80</strong> hours per month? Can be paid or in-kind. <strong>(AGPI 18 N)</strong>:</p>
                                     <label for="abawdIName0" id="abawdILabel0"></label>
                                     <input type="checkbox" id="abawdIName0" onclick="showMe('abawdHBonus', this)">
                                 </div>
@@ -438,7 +438,7 @@
                                 </div>
                                 <div id="abawdWorking" style="display: none">
                                     <fieldset>
-                                        <legend> Was the customer advised that they must report if their weekly hours drop below 20 hours per week, averaged monthly: </legend>
+                                        <legend> Was the customer advised that they must report if their hours drop below 80 hours per month: </legend>
                                         <label class="hrChg" type="radio" for="abawdHourChangeYes" id="abawdHourChange" name="abawdHrChange">Yes</label>
                                         <input class="hrChg" type="radio" id="abawdHourChangeYes" name="abawdHrChange">
                                         <label class="hrChg" type="radio" for="abawdHourChangeNo" id="abawdHourChange" name="abawdHrChange">No</label>
@@ -481,11 +481,8 @@
                                 <p id="recvDisab" name="disabScreen" style='display: "inline-block"'>Does anyone already receive Supplemental Security Income (SSI) benefits or Social Security Disability (SSDI) benefits:</p>
                                 <div id="dddQuest1">
                                 </div>
-                                <p id="pendDisab" name="disabScreen">Does anyone have an application pending for SSI or SSDI:</p>
+                                <p id="appealDisab" name="disabScreen">Does anyone have an appeal pending or under reconsideration with the Social Security Administration within the last year:</p>
                                 <div id="dddQuest2">
-                                </div>
-                                <p id="appealDisab" name="disabScreen">Does anyone have an appeal pending or under reconsideration with the Social Security Administration:</p>
-                                <div id="dddQuest3">
                                 </div>
                             </div>
                             
@@ -619,7 +616,7 @@
                                     <input type="checkbox" id="pip" value="PIP" name="tplTypes">
                                 </fieldset>
                                 
-                                <textarea type="textarea" name="3rdPtyDis" id="3rdPtyDisDisc" aria-label="Enter any discrepant or unreported 3rd party insurance information." placeholder="Enter any discrepant or unreported 3rd party insurance information."></textarea>
+                                <textarea type="textarea" name="3rdPtyDis" id="3rdPtyDisDisc" aria-label="List all HH members covered by TPL.  Enter any discrepant or unreported 3rd party insurance information." placeholder="List all HH members covered by TPL.  Enter any discrepant or unreported 3rd party insurance information."></textarea>
                             </div>
                             
                         </div>
@@ -662,7 +659,7 @@
                             <textarea name="immunizedChildDesc" id="immunChildDesc" rows="1" aria-label="Enter the name of the child(ren) and reason why they are not current." placeholder="Enter the name of the child(ren) and reason why they are not current." style="display: none;" onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
-                                <legend> Is applicant a teen parent: </legend>
+                                <legend> Are benefits being requested for a Teen Parent: </legend>
                                 <label for="teenParentYes" name="teenParent">Yes</label>
                                 <input type="radio" id="teenParentYes" name="teenParent" value="Yes" onclick="showMe('teenParentSchool', this)">
                                 <label for="teenParentNo" name="teenParent">No</label>
@@ -781,7 +778,7 @@
                         </div>
                         <div id="wrapUpArea" class="dynamicContent" style="display: none">
                             <label type="textarea" id="addCommentLbl" for="addComment">Additional Comments:</label>
-                            <textarea class="householdDisc" type="textarea" name="addComments" id="addComment" rows="4" aria-label="Additional Comments: Check case for upcoming changes that might affect any exemptions or exceptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD." placeholder="Check case for upcoming changes that might affect any exemptions or exceptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD."
+                            <textarea class="householdDisc" type="textarea" name="addComments" id="addComment" rows="4" aria-label="Additional Comments: Check case for upcoming changes that might affect any exemptions or exceptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD." placeholder="Check case for upcoming changes that might affect any exemptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD."
                                                         onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
@@ -848,7 +845,7 @@
 <script src="/js/intranetv2.js"></script> 
 <script src="scripts/pikaday.js"></script>
 <script src="scripts/moment-with-locales.js"></script>
-<script src="scripts/clrcscripts.js"></script>
+<script src="scripts/clrcscripts1.js"></script>
 <script src="scripts/buildnote.js"></script>
 
 <script>

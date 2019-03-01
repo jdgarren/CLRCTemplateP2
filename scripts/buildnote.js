@@ -418,12 +418,10 @@ function getCLRCText() {
         retro = "Retro Medicaid requested: " + retro + ". ";
     }else retro = "";
     var allDDD = document.getElementById('dddScreening').getElementsByClassName('dddList');
-    var dddLength = (allDDD.length/3);
+    var dddLength = (allDDD.length/2);
     var dddAArray = [];
-    var dddBArray = [];
     var dddCArray = [];
     var dddA = "";
-    var dddB = "";
     var dddC = "";
     if (childMember == false) {
         for (i = 0; i < dddLength; i++) {
@@ -434,15 +432,6 @@ function getCLRCText() {
             if (dddAArray.length > 0) {
                 dddA = "Receiving SSI/SSDI: " + dddAArray + ". "
             }else dddA = "";
-        }
-        for (i = 0; i < dddLength; i++) {
-            var dddB = document.getElementById('dddScreenB' + i).checked
-            if (dddB == true) {
-                dddBArray.push(document.getElementById('dddQuestB' + (i)).innerText);
-            }else dddB = "";
-            if (dddBArray.length > 0) {
-            dddB = "Application pending for SSI/SSDI: " + dddBArray + ". " 
-            }else dddB = "";
         }
         for (i = 0; i < dddLength; i++) {
             var dddC = document.getElementById('dddScreenC' + i).checked
@@ -546,14 +535,16 @@ function getCLRCText() {
     }else curImm = "";
     var teenPrnt = document.querySelector('input[name="teenParent"]:checked');
     if (teenPrnt != null) {
+        teenPrnt = teenPrnt.value;
         if (teenPrnt == "No") {
             teenPrnt = "";
-        }else teenPrnt = "Teen Parent: " + teenPrnt.value + ". " + document.getElementById('teenParentSchoolDisc').value + " ";
+        }else teenPrnt = "Teen Parent: " + teenPrnt + ". " + document.getElementById('teenParentSchoolDisc').value + " ";
     }else teenPrnt = "";
     var needCare = document.querySelector('input[name="needForCare"]:checked');
     if (needCare != null) {
+        needCare = needCare.value
         if (needCare == "Yes") {
-            needCare = "Need for care: " + needCare.value + ". " + document.getElementById('disabledMemDesc').value + " ";
+            needCare = "Need for care: " + needCare + ". " + document.getElementById('disabledMemDesc').value + " ";
         }else needCare = "";
     }else needCare = "";
     var degRel = document.querySelector('input[name="degRelate"]:checked');
@@ -610,6 +601,6 @@ function getCLRCText() {
             custFraud = "Fraud referral: " + custFraud.value + ". " + document.getElementById('fraudRsnDet').value;
         } else custFraud = "";
     }else custFraud = "";
-    clrcDta.value = wrkrId + accNum + doa + bfits + nameData + intvDate + intvDta + addYesAns + addNoAns + phoneYesAns + phoneNoAns + rAndRText + ncpAns + hhMembs + hhRelate + ppMember + appMember + disqMember + curDet + curRev + nextRev + ca + citAns + assetAns + earnAns + unEarnAns + hhExpenAns + mgmtAns + drugTrfc + fleeFel + colStu + hmeLs + abawdStmt + abdAAns + abdBAns + abdCAns + abdDAns + abdEAns + abdFAns + abdGAns + abdHAns + abdIAns + abawdMem + tmeLmts + regainElg + dddA + dddB + dddC + dddMem + preg + taxFile + claimAll + oothClaimed + agedOut + thrdpty + intendWorkReg + schlAtt + schlConf + curImm + teenPrnt + needCare + degRel + caretakeShelt + careTIncl + careWorkReg + ocwPlace + rcg + rapShelt + rapHmeless + rapMarry + addComm + custPend + custFraud;
+    clrcDta.value = wrkrId + accNum + doa + bfits + nameData + intvDate + intvDta + addYesAns + addNoAns + phoneYesAns + phoneNoAns + rAndRText + ncpAns + hhMembs + hhRelate + ppMember + appMember + disqMember + curDet + curRev + nextRev + ca + citAns + assetAns + earnAns + unEarnAns + hhExpenAns + mgmtAns + drugTrfc + fleeFel + colStu + hmeLs + abawdStmt + abdAAns + abdBAns + abdCAns + abdDAns + abdEAns + abdFAns + abdGAns + abdHAns + abdIAns + abawdMem + tmeLmts + regainElg + dddA + dddC + dddMem + preg + taxFile + claimAll + oothClaimed + agedOut + thrdpty + intendWorkReg + schlAtt + schlConf + curImm + teenPrnt + needCare + degRel + caretakeShelt + careTIncl + careWorkReg + ocwPlace + rcg + rapShelt + rapHmeless + rapMarry + addComm + custPend + custFraud;
     clrcDta.focus();
 }

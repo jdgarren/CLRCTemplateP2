@@ -26,7 +26,6 @@
         }
         
         function getabawdName(d, array) {
-            document.getElementById('incomeSpan').innerHTML=abawdIncomeEquiv;
             document.getElementById('monthlySpan').innerHTML=abawdMonthEquiv;
             document.getElementById('monthlySpan').innerHTML=abawdMonthEquiv;
             document.getElementById('abawdDiv' + d + '0').style.display = "none";
@@ -282,16 +281,6 @@
                     document.getElementById('dddQuest1').appendChild(iLab);
                     document.getElementById('dddQuest1').appendChild(iIn);
                     document.getElementById('dddQuestA' + i).innerHTML = dddName;
-                    var jLab = document.createElement("label");
-                    jLab.setAttribute('for','dddScreenB' + i );
-                    jLab.id = 'dddQuestB' + i;
-                    var jIn = document.createElement("input");
-                    jIn.className = 'dddList';
-                    jIn.type = 'checkbox';
-                    jIn.id = 'dddScreenB' + i;
-                    document.getElementById('dddQuest2').appendChild(jLab);
-                    document.getElementById('dddQuest2').appendChild(jIn);
-                    document.getElementById('dddQuestB' + i).innerHTML = dddName;
                     var kLab = document.createElement("label");
                     kLab.setAttribute('for','dddScreenC' + i );
                     kLab.id = 'dddQuestC' + i;
@@ -299,8 +288,8 @@
                     kIn.className = 'dddList';
                     kIn.type = 'checkbox';
                     kIn.id = 'dddScreenC' + i;
-                    document.getElementById('dddQuest3').appendChild(kLab);
-                    document.getElementById('dddQuest3').appendChild(kIn);
+                    document.getElementById('dddQuest2').appendChild(kLab);
+                    document.getElementById('dddQuest2').appendChild(kIn);
                     document.getElementById('dddQuestC' + i).innerHTML = dddName;
                     i++;
             }
@@ -310,7 +299,7 @@
     
         function checkDDD() {
             var allDDD = document.getElementById('dddScreening').getElementsByClassName('dddList');
-            var dddLength = (allDDD.length/3);
+            var dddLength = (allDDD.length/2);
             potenDDD = [];
             var hhAgeArray = [];
             var table = document.getElementById("hhCompTable");
@@ -327,10 +316,9 @@
             if (childMember == false) {
                 for (i = 0; i < dddLength; i++) {
                     var dddA = document.getElementById('dddScreenA' + i).checked
-                    var dddB = document.getElementById('dddScreenB' + i).checked
                     var dddC = document.getElementById('dddScreenC' + i).checked
                     var dddMem = "";
-                    if (dddA == false && dddB == false && dddC == false) {
+                    if (dddA == false && dddC == false) {
                         dddName = document.getElementById('dddQuestA' + i).innerHTML;
                         potenDDD.push(dddName);
                     }
