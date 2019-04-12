@@ -415,7 +415,11 @@ function getCLRCText() {
     
     var retro = document.querySelector('input[name="retroMedicaid"]:checked');
     if (retro != null) {
-        retro = "Retro Medicaid requested: " + retro + ". ";
+        retro = document.querySelector('input[name="retroMedicaid"]:checked').value;
+        if (retro == 'Yes') {
+            var retroTxt = document.getElementById("retroMedicaidTxt").value;
+            retro = "Retro Medicaid requested: " + retro + " " + retroTxt + ". ";
+        } else retro = "";
     }else retro = "";
     var allDDD = document.getElementById('dddScreening').getElementsByClassName('dddList');
     var dddLength = (allDDD.length/2);
@@ -601,6 +605,6 @@ function getCLRCText() {
             custFraud = "Fraud referral: " + custFraud.value + ". " + document.getElementById('fraudRsnDet').value;
         } else custFraud = "";
     }else custFraud = "";
-    clrcDta.value = wrkrId + accNum + doa + bfits + nameData + intvDate + intvDta + addYesAns + addNoAns + phoneYesAns + phoneNoAns + rAndRText + ncpAns + hhMembs + hhRelate + ppMember + appMember + disqMember + curDet + curRev + nextRev + ca + citAns + assetAns + earnAns + unEarnAns + hhExpenAns + mgmtAns + drugTrfc + fleeFel + colStu + hmeLs + abawdStmt + abdAAns + abdBAns + abdCAns + abdDAns + abdEAns + abdFAns + abdGAns + abdHAns + abdIAns + abawdMem + tmeLmts + regainElg + dddA + dddC + dddMem + preg + taxFile + claimAll + oothClaimed + agedOut + thrdpty + intendWorkReg + schlAtt + schlConf + curImm + teenPrnt + needCare + degRel + caretakeShelt + careTIncl + careWorkReg + ocwPlace + rcg + rapShelt + rapHmeless + rapMarry + addComm + custPend + custFraud;
+    clrcDta.value = wrkrId + accNum + doa + bfits + nameData + intvDate + intvDta + addYesAns + addNoAns + phoneYesAns + phoneNoAns + rAndRText + ncpAns + hhMembs + hhRelate + ppMember + appMember + disqMember + curDet + curRev + nextRev + ca + citAns + assetAns + earnAns + unEarnAns + hhExpenAns + mgmtAns + drugTrfc + fleeFel + colStu + hmeLs + abawdStmt + abdAAns + abdBAns + abdCAns + abdDAns + abdEAns + abdFAns + abdGAns + abdHAns + abdIAns + abawdMem + tmeLmts + regainElg + retro + dddA + dddC + dddMem + preg + taxFile + claimAll + oothClaimed + agedOut + thrdpty + intendWorkReg + schlAtt + schlConf + curImm + teenPrnt + needCare + degRel + caretakeShelt + careTIncl + careWorkReg + ocwPlace + rcg + rapShelt + rapHmeless + rapMarry + addComm + custPend + custFraud;
     clrcDta.focus();
 }

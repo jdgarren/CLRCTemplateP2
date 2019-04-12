@@ -21,7 +21,7 @@ table thead th {
     text-align:center;
     padding: 8px 5px 5px 5px;
     color: #003366;
-    background:  #CEDDEC;
+    background:  #DBE5F0;
     
 }
 thead {
@@ -282,6 +282,11 @@ label[type=text] {
 .dynamicContent {
     height: auto;
     width: 100%;
+}
+.dynamicContent1 {
+    height: auto;
+    width: 100%;
+    margin-top: 8px;
 }
 .householdDisc {
     display: block;

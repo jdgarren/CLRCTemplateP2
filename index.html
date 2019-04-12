@@ -193,7 +193,7 @@
                                 </tbody>
                             </table>
                             
-                            <textarea type="textarea" id="idVerif" aria-label="Explain relationship for all members listed above." placeholder="Explain relationship for all members listed above." rows="2"4" onkeyup="auto_grow(this)"></textarea>
+                            <textarea type="textarea" id="idVerif" aria-label="Explain relationship for all members listed above." placeholder="Explain relationship for all members listed above." rows="2" onkeyup="auto_grow(this)"></textarea>
                             <div>
                             <label type="select" for="typeEligDet">Type of eligibility determination completed:</label>
                             <select id="typeEligDet" name="typeEligDet" onfocus="createArray(); abawdData(); getabawdName ('A', abawdMembList);">
@@ -238,7 +238,7 @@
                             </select>
                             </div>
 
-                            <textarea type="textarea" id="authenDisc" name="authenDisc" aria-label="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." placeholder="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." rows="2"4" style="display:none" onkeyup="auto_grow(this)"></textarea>
+                            <textarea type="textarea" id="authenDisc" name="authenDisc" aria-label="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." placeholder="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." rows="2" style="display:none" onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
                                 <legend> Everyone in the HH US Citizens: </legend>
@@ -249,7 +249,7 @@
                             </fieldset>
                             <div id="citizen1" style="display:none">
                                 
-                                <textarea type="textarea" id="nonCitizen" aria-label="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." placeholder="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." rows="2"4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="nonCitizen" aria-label="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." placeholder="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." rows="2" onkeyup="auto_grow(this)"></textarea>
                             </div>
                             <div id="sanction1" style="display:none">
                                 
@@ -268,7 +268,7 @@
                             </fieldset>
                             <div id="ncpDet" style="display:none">
                                 
-                                <textarea type="textarea" id="ncpDetail" aria-label="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." placeholder="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." rows="3"4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="ncpDetail" aria-label="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." placeholder="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." rows="3" onkeyup="auto_grow(this)"></textarea>
                             </div>
                             
                             <label id="assets" for="assetDisc">Assets:</label>
@@ -330,7 +330,7 @@
                             </div>
                             <div id="ABAWDStateSect" style="display: none">
                                 <fieldset>
-                                    <legend> Were <a href="images/ABAWDStatement.pdf" target="_blank" class="inlineLink">time limits, ABAWD work requirements, and exclusions</a> explained to the customer: </legend>
+                                    <legend> Were <a href="images/ABAWDStatement.pdf" target="_blank" class="inlineLink">time limits, ABAWD work requirements, and exemptions</a> explained to the customer: </legend>
                                     <label for="ABAWDStateYes" name="ABAWDStatement">Yes</label>
                                     <input type="radio" id="ABAWDStateYes" name="ABAWDStatement" value="Yes" onclick="hideIt('ABAWDStatExpl', this)">
                                     <label for="ABAWDStateNo" name="ABAWDStatement">No</label>
@@ -338,7 +338,7 @@
                                 </fieldset>
                                 
                                 <div id="ABAWDStatExpl" style="display: none;">
-                                    <textarea type="textarea" name="ABAWDStatementExpl" id="ABAWDStatExplTxt" aria-label="Explain why time limits, ABAWD work requirements, and exclusions were not explained to the customer." placeholder="Explain why time limits, ABAWD work requirements, and exclusions were not explained to the customer." onkeyup="auto_grow(this)"></textarea>
+                                    <textarea type="textarea" name="ABAWDStatementExpl" id="ABAWDStatExplTxt" aria-label="Explain why time limits, ABAWD work requirements, and exemptions were not explained to the customer." placeholder="Explain why time limits, ABAWD work requirements, and exemptions were not explained to the customer." onkeyup="auto_grow(this)"></textarea>
                                 </div>
                             </div>
                             <div id="abawdStuff" style="display:none">
@@ -384,7 +384,7 @@
                                 </div>
                                 <div id="abawdDivE0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdEmp30">Is anyone in the household employed, self-employed, volunteering, working minimum of <strong>120</strong> hours monthly or earning monthly wages at least equal to $<span id="monthlySpan"></span>. Can be paid or in-kind <strong>(AGPI 21)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdEmp30">Is anyone in the household employed, self-employed, volunteering, working minimum of <strong>120</strong> hours monthly or earning monthly wages at least equal to <strong>$<span id="monthlySpan"></span></strong>. Can be paid or in-kind <strong>(AGPI 21)</strong>:</p>
                                     <label for="abawdEName0" id="abawdELabel0"></label>
                                     <input type="checkbox" id="abawdEName0">
                                 </div>
@@ -475,7 +475,7 @@
                             </fieldset>
                             
                             <div id="retroMedicaid1" style="display:none">
-                                <input type="text" name="retroMedicaid" aria-label="Enter member name and months requested." placeholder="Enter member name and months requested." style="width: 500px;">
+                                <input type="text" id="retroMedicaidTxt" name="retroMedicaidTxt" aria-label="Enter member name and months requested." placeholder="Enter member name and months requested." style="width: 500px;">
                             </div>
                             <div id="dddScreening" style="display:none">
                                 <p id="recvDisab" name="disabScreen" style='display: "inline-block"'>Does anyone already receive Supplemental Security Income (SSI) benefits or Social Security Disability (SSDI) benefits:</p>
@@ -776,8 +776,8 @@
                                 <textarea type="textarea" id="rapSpouseName" aria-label="What is the spouse's name and where do they live." placeholder="What is the spouse's name and where do they live." rows="1" onkeyup="auto_grow(this)"></textarea>
                             </div>
                         </div>
-                        <div id="wrapUpArea" class="dynamicContent" style="display: none">
-                            <label type="textarea" id="addCommentLbl" for="addComment">Additional Comments:</label>
+                        <div id="wrapUpArea" class="dynamicContent1" style="display: none">
+                            <label type="textarea" id="addCommentLbl" for="addComment" class="addComm">Additional Comments:</label>
                             <textarea class="householdDisc" type="textarea" name="addComments" id="addComment" rows="2" aria-label="Check case for upcoming changes that might affect any exemptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD." placeholder="Check case for upcoming changes that might affect any exemptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD."
                                                         onkeyup="auto_grow(this)"></textarea>
                             

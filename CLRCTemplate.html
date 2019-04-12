@@ -76,7 +76,7 @@
                         </div>
                         
                         <fieldset>
-                            <legend> Interview Completed? </legend>
+                            <legend> Interview Completed: </legend>
                             <label for="intvdYes">Yes</label>
                             <input type="radio" id="intvdYes" name="int" value="Yes" onclick="intvReset('intvAttempt', this)">
                             <label for="intvdNo">No</label>
@@ -94,7 +94,7 @@
                             </fieldset>
                             <div id="interviewNeeded1" style="display:none">
                                 
-                                <textarea type="textarea" id="intvAttemptDisc" aria-label="Explain why the interview was not attempted." placeholder="Explain why the interview was not attempted." rows="4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="intvAttemptDisc" aria-label="Explain why the interview was not attempted." placeholder="Explain why the interview was not attempted." rows="2" onkeyup="auto_grow(this)"></textarea>
                             </div>
                             
                             <div id="intvAttemptYes1" style="display:none">
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                         
-                        <input type="button" id="getTemplate" onclick="getSections();" value="Get CLRC Template">
+                        <input type="button" class="genBtn"id="getTemplate" onclick="getSections();" value="Get CLRC Template">
                         <p>DDD interview responses must be added separately in addition to this template.</p>
                         <p>Be sure to review prior CLRC entries before you begin your interview.</p>
                         <hr>
@@ -154,7 +154,7 @@
                                         <input type="radio" id="reviewRRNo" name="reviewRR" value="No" onclick="showMe('rrWhyNot', this)">
                                     </fieldset>
                                     <div id="rrWhyNot" style="display:none">
-                                        <textarea type="textarea" id="rrWhyNotDis" aria-label="Discuss why 'Rights and Responsibilities' were not reviewed." placeholder="Discuss why 'Rights and Responsibilities' were not reviewed." rows="4" onkeyup="auto_grow(this)"></textarea>
+                                        <textarea type="textarea" id="rrWhyNotDis" aria-label="Discuss why 'Rights and Responsibilities' were not reviewed." placeholder="Discuss why 'Rights and Responsibilities' were not reviewed." rows="2" onkeyup="auto_grow(this)"></textarea>
                                     </div>
                                 </div>
                         </div>
@@ -188,12 +188,12 @@
                                         <td class= "PPCheck"><input type="checkbox" id="pandp1" aria-labelledby="pandp"></td>
                                         <td><input type="checkbox" id="disq1" aria-labelledby="disq" onclick="showMe('sanction1', this)"></td>
                                         <td class= "disabledCheck"><input type="checkbox" id="disab1" aria-labelledby="disab"></td>
-                                        <td><input type="button" id="add1" value="Add" onclick="newHHMember();" aria-labelledby="addMem"></td>
+                                        <td><input type="button" class="genBtn"id="add1" value="Add" onclick="newHHMember();" aria-labelledby="addMem"></td>
                                     </tr>
                                 </tbody>
                             </table>
                             
-                            <textarea type="textarea" id="idVerif" aria-label="Explain relationship for all members listed above." placeholder="Explain relationship for all members listed above." rows="4" onkeyup="auto_grow(this)"></textarea>
+                            <textarea type="textarea" id="idVerif" aria-label="Explain relationship for all members listed above." placeholder="Explain relationship for all members listed above." rows="2" onkeyup="auto_grow(this)"></textarea>
                             <div>
                             <label type="select" for="typeEligDet">Type of eligibility determination completed:</label>
                             <select id="typeEligDet" name="typeEligDet" onfocus="createArray(); abawdData(); getabawdName ('A', abawdMembList);">
@@ -238,7 +238,7 @@
                             </select>
                             </div>
 
-                            <textarea type="textarea" id="authenDisc" name="authenDisc" aria-label="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." placeholder="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." rows="4" style="display:none" onkeyup="auto_grow(this)"></textarea>
+                            <textarea type="textarea" id="authenDisc" name="authenDisc" aria-label="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." placeholder="If 'Manual' explain exactly how authentication was completed.  If 'No' explain why and detail any pending information needed." rows="2" style="display:none" onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
                                 <legend> Everyone in the HH US Citizens: </legend>
@@ -249,12 +249,12 @@
                             </fieldset>
                             <div id="citizen1" style="display:none">
                                 
-                                <textarea type="textarea" id="nonCitizen" aria-label="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." placeholder="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." rows="4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="nonCitizen" aria-label="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." placeholder="If there are any non-US citizens enter name, USCIS status and number of individual, if available.  Specify if SAVE is needed.  If any documentation is available at the interview, explain." rows="2" onkeyup="auto_grow(this)"></textarea>
                             </div>
                             <div id="sanction1" style="display:none">
                                 
                                 <label type="textarea" id="sanctionTxt" for="sanction">Disqualified/Sanctioned:</label>
-                                <textarea type="textarea" id="sanction" aria-label="Disqualified/Sanctioned: Identify the disqualified or sanctioned member(s) and discuss the type of sanction, pend for cooperation if applicable.  If there is an E&amp;T sanction, must review for any potential exemptions, exceptions, or good cause.  Must document that this review was completed."  placeholder="Identify the disqualified or sanctioned member(s) and discuss the type of sanction, pend for cooperation if applicable.  If there is an E&amp;T sanction, must review for any potential exemptions, exceptions, or good cause.  Must document that this review was completed." rows="4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="sanction" aria-label="Disqualified/Sanctioned: Identify the disqualified or sanctioned member(s) and discuss the type of sanction, pend for cooperation if applicable.  If there is an E&amp;T sanction, must review for any potential exemptions, exceptions, or good cause.  Must document that this review was completed."  placeholder="Identify the disqualified or sanctioned member(s) and discuss the type of sanction, pend for cooperation if applicable.  If there is an E&amp;T sanction, must review for any potential exemptions, exceptions, or good cause.  Must document that this review was completed." rows="2" onkeyup="auto_grow(this)"></textarea>
                             </div>
                             
                             <fieldset class="assetSp">
@@ -268,23 +268,23 @@
                             </fieldset>
                             <div id="ncpDet" style="display:none">
                                 
-                                <textarea type="textarea" id="ncpDetail" aria-label="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." placeholder="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." rows="4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="ncpDetail" aria-label="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." placeholder="Provide NCP details not reported on application or explain why NCP details were not provided or available.  If customer refuses to provide, include that here.  If there are no changes from information on the application, this entry may be left blank." rows="3" onkeyup="auto_grow(this)"></textarea>
                             </div>
                             
                             <label id="assets" for="assetDisc">Assets:</label>
-                            <textarea class="householdDisc" type="textarea" name="assetDisc" id="assetDisc" rows="4" display="block" aria-label="Assets: Include a discussion of assets belonging to each member of the Standard Filing Unit (SFU).  Document any discrepancies from the application.  If no assets, include 'None.' here." placeholder="Include a discussion of assets belonging to each member of the Standard Filing Unit (SFU).  Document any discrepancies from the application.  If no assets, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
+                            <textarea class="householdDisc" type="textarea" name="assetDisc" id="assetDisc" rows="2" display="block" aria-label="Assets: Include a discussion of assets belonging to each member of the Standard Filing Unit (SFU).  Document any discrepancies from the application.  If no assets, include 'None.' here." placeholder="Include a discussion of assets belonging to each member of the Standard Filing Unit (SFU).  Document any discrepancies from the application.  If no assets, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
                             
                             <label type="textarea" id="earnedIncome" for="earnedIncomeDisc">Earned Income:</label>
-                            <textarea class="householdDisc" type="textarea" name="earnedIncomeDisc" id="earnedIncomeDisc" rows="4" aria-label="Earned Income: Specify the employer for each member as appropriate and include details on hours worked.  If self employed, include any details, including hours worked and unreported deductions.  Document any non-representative income or any other discrepancies from the application.  If no earned income, include 'None.' here." placeholder="Specify the employer for each member as appropriate and include details on hours worked.  If self employed, include any details, including hours worked and unreported deductions.  Document any non-representative income or any other discrepancies from the application.  If no earned income, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
+                            <textarea class="householdDisc" type="textarea" name="earnedIncomeDisc" id="earnedIncomeDisc" rows="2" aria-label="Earned Income: Specify the employer for each member as appropriate and include details on hours worked.  If self employed, include any details, including hours worked and unreported deductions.  Document any non-representative income or any other discrepancies from the application.  If no earned income, include 'None.' here." placeholder="Specify the employer for each member as appropriate and include details on hours worked.  If self employed, include any details, including hours worked and unreported deductions.  Document any non-representative income or any other discrepancies from the application.  If no earned income, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
                             
                             <label type="textarea" id="unearnedIncome" for="unearnedIncomeDisc">Unearned Income:</label>
-                            <textarea class="householdDisc" type="textarea" name="unearnedIncomeDisc" id="unearnedIncomeDisc" rows="4" aria-label="Unearned Income: Include details on the type, source and frequency.  Document any non-representative income or any other discrepancies from the application.  Include a discussion of income received from per capita payments from a tribe, from natural resources or from selling things of cultural significance, if applicable and, provide the monthly or annual amount.   If no unearned income, include 'None.' here." placeholder="Include details on the type, source and frequency.  Document any non-representative income or any other discrepancies from the application.  Include a discussion of income received from per capita payments from a tribe, from natural resources or from selling things of cultural significance, if applicable and, provide the monthly or annual amount.   If no unearned income, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
+                            <textarea class="householdDisc" type="textarea" name="unearnedIncomeDisc" id="unearnedIncomeDisc" rows="3" aria-label="Unearned Income: Include details on the type, source and frequency.  Document any non-representative income or any other discrepancies from the application.  Include a discussion of income received from per capita payments from a tribe, from natural resources or from selling things of cultural significance, if applicable and, provide the monthly or annual amount.   If no unearned income, include 'None.' here." placeholder="Include details on the type, source and frequency.  Document any non-representative income or any other discrepancies from the application.  Include a discussion of income received from per capita payments from a tribe, from natural resources or from selling things of cultural significance, if applicable and, provide the monthly or annual amount.   If no unearned income, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
                             
                             <label type="textarea" id="expenses" for="expensesDisc">HH Expenses:</label>
-                            <textarea class="householdDisc" type="textarea" name="expensesDisc" id="expensesDisc" rows="4" aria-label="HH Expenses: Discuss shelter, utilities, method of heating or cooling, medical, dependent care, as well as any miscellaneous expenses and the payer of each.  Document any discrepancies from the application.  If no expenses, include 'None.' here." placeholder="Discuss shelter, utilities, method of heating or cooling, medical, dependent care, as well as any miscellaneous expenses and the payer of each.  Document any discrepancies from the application.  If no expenses, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
+                            <textarea class="householdDisc" type="textarea" name="expensesDisc" id="expensesDisc" rows="2" aria-label="HH Expenses: Discuss shelter, utilities, method of heating or cooling, medical, dependent care, as well as any miscellaneous expenses and the payer of each.  Document any discrepancies from the application.  If no expenses, include 'None.' here." placeholder="Discuss shelter, utilities, method of heating or cooling, medical, dependent care, as well as any miscellaneous expenses and the payer of each.  Document any discrepancies from the application.  If no expenses, include 'None.' here." onkeyup="auto_grow(this)"></textarea>
                             
                             <label type="textarea" id="management" for="managementDisc">Management:</label>
-                            <textarea class="householdDisc" type="textarea" name="managementDisc" id="managementDisc" rows="4" aria-label="Management: Is the SFU able to meet reported expenses with income discussed?  If not, include a discussion on how Management is being met." placeholder="Is the SFU able to meet reported expenses with income discussed?  If not, include a discussion on how Management is being met." onkeyup="auto_grow(this)" onfocus="createDDD()"></textarea>
+                            <textarea class="householdDisc" type="textarea" name="managementDisc" id="managementDisc" rows="2" aria-label="Management: Is the SFU able to meet reported expenses with income discussed?  If not, include a discussion on how Management is being met." placeholder="Is the SFU able to meet reported expenses with income discussed?  If not, include a discussion on how Management is being met." onkeyup="auto_grow(this)" onfocus="createDDD()"></textarea>
                         </div>
                         <div id="legalQs" style="display: none">
                             <div>
@@ -318,7 +318,7 @@
                             <textarea type="textarea" name="collegeDesc" id="collegeDesc" rows="1" aria-label="Enter the name of the student, school, enrollment status (Full or Half time), and any exemptions." placeholder="Enter the name of the student, school, enrollment status (Full or Half time), and any exemptions." style="display: none;" onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
-                                <legend> Does anyone in the household report themselves as homeless? </legend>
+                                <legend> Does anyone in the household report themselves as homeless: </legend>
                                 <label for="homelessFAYes" name="homelessFA">Yes</label>
                                 <input type="radio" id="homelessFAYes" name="homelessFA" value="Yes" onclick="showMe('homelessFADiscArea', this)">
                                 <label for="homelessFANo" name="homelessFA">No</label>
@@ -326,11 +326,11 @@
                             </fieldset>
                             
                             <div id="homelessFADiscArea" style="display: none;">
-                                <textarea type="textarea" name="homelessFADisc" rows="4" id="homelessFADisc" aria-label="Discuss who is homeless.  Discuss if the person has been chronically homeless (living on the streets for more than 90 days).  Explore if the reason for the homelessness is due to a physical or mental incapacity.  If the homeless person has income, discuss if they have a shelter-related costs (hotel rooms, telephone charges, etc.) and wish to claim as a deduction." placeholder="Discuss who is homeless.  Discuss if the person has been chronically homeless (living on the streets for more than 90 days).  Explore if the reason for the homelessness is due to a physical or mental incapacity.  If the homeless person has income, discuss if they have a shelter-related costs (hotel rooms, telephone charges, etc.) and wish to claim as a deduction." onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" name="homelessFADisc" rows="2" id="homelessFADisc" aria-label="Who is homeless?  Discuss if the reason for the homelessness is due to a physical or mental incapacity.  If so, discuss the condition and the expected end date. If the homeless person has income, discuss if they have shelter related costs (hotel rooms, telephone charges, etc.) and wish to claim as a deduction." placeholder="Who is homeless?  Discuss if the reason for the homelessness is due to a physical or mental incapacity.  If so, discuss the condition and the expected end date. If the homeless person has income, discuss if they have shelter related costs (hotel rooms, telephone charges, etc.) and wish to claim as a deduction." onkeyup="auto_grow(this)"></textarea>
                             </div>
                             <div id="ABAWDStateSect" style="display: none">
                                 <fieldset>
-                                    <legend> Were <a href="images/ABAWDStatement.pdf" target="_blank" class="inlineLink">time limits, ABAWD work requirements, and exclusions</a> explained to the customer: </legend>
+                                    <legend> Were <a href="images/ABAWDStatement.pdf" target="_blank" class="inlineLink">time limits, ABAWD work requirements, and exemptions</a> explained to the customer: </legend>
                                     <label for="ABAWDStateYes" name="ABAWDStatement">Yes</label>
                                     <input type="radio" id="ABAWDStateYes" name="ABAWDStatement" value="Yes" onclick="hideIt('ABAWDStatExpl', this)">
                                     <label for="ABAWDStateNo" name="ABAWDStatement">No</label>
@@ -338,7 +338,7 @@
                                 </fieldset>
                                 
                                 <div id="ABAWDStatExpl" style="display: none;">
-                                    <textarea type="textarea" name="ABAWDStatementExpl" id="ABAWDStatExplTxt" aria-label="Explain why time limits, ABAWD work requirements, and exclusions were not explained to the customer." placeholder="Explain why time limits, ABAWD work requirements, and exclusions were not explained to the customer." onkeyup="auto_grow(this)"></textarea>
+                                    <textarea type="textarea" name="ABAWDStatementExpl" id="ABAWDStatExplTxt" aria-label="Explain why time limits, ABAWD work requirements, and exemptions were not explained to the customer." placeholder="Explain why time limits, ABAWD work requirements, and exemptions were not explained to the customer." onkeyup="auto_grow(this)"></textarea>
                                 </div>
                             </div>
                             <div id="abawdStuff" style="display:none">
@@ -347,7 +347,7 @@
                                     <p class="abawdLabel" id="abawdDisa">Is anyone in the household receiving SSI or SSDI <strong>(AGPI 09)</strong>:</p>
                                 </div>
                                 <div id="abawdANextDiv" style="display: none">
-                                    <input type="button" id="abawdDisaNext" onclick="abawdData(); buildAbawdArray('A','B', abawdMembList, abawdAList); getabawdName('B', abawdAList); checkMoreAbawd(abawdAList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdDisaNext" onclick="abawdData(); buildAbawdArray('A','B', abawdMembList, abawdAList); getabawdName('B', abawdAList); checkMoreAbawd(abawdAList);" value="No/Next">
                                 </div>
                                 <div id="abawdDivB0" style="display: none">
                                     
@@ -356,7 +356,7 @@
                                     <input type="checkbox" id="abawdBName0" onclick="showMe('whoCareFor', this)">
                                 </div>
                                 <div id="abawdBNextDiv" style="display: none">
-                                    <input type="button" id="abawdCareNext" onclick="buildAbawdArray('B','C', abawdAList, abawdBList); getabawdName('C', abawdBList); checkMoreAbawd(abawdBList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdCareNext" onclick="buildAbawdArray('B','C', abawdAList, abawdBList); getabawdName('C', abawdBList); checkMoreAbawd(abawdBList);" value="No/Next">
                                 </div>
                                 <div id="abawdBBonus" style="display:none">
                                     <textarea type="textarea" id="whoCareForAns" name="whoCare" aria-label="Who is providing care and to whom is care provided?" placeholder="Who is providing care and to whom is care provided?" onkeyup="auto_grow(this)"></textarea>
@@ -368,7 +368,7 @@
                                     <input type="checkbox" id="abawdCName0">
                                 </div>
                                 <div id="abawdCNextDiv" style="display: none">
-                                    <input type="button" id="abawdDepNext" onclick="buildAbawdArray('C','D', abawdBList, abawdCList); getabawdName('D', abawdCList); checkMoreAbawd(abawdCList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdDepNext" onclick="buildAbawdArray('C','D', abawdBList, abawdCList); getabawdName('D', abawdCList); checkMoreAbawd(abawdCList);" value="No/Next">
                                 </div>
                                 <div id="abawdDivD0" style="display: none">
                                     
@@ -377,19 +377,19 @@
                                     <input type="checkbox" id="abawdDName0" onclick="showMe('whereTreated', this)">
                                 </div>
                                 <div id="abawdDNextDiv" style="display: none">
-                                    <input type="button" id="abawdDrugTNext" onclick="buildAbawdArray('D','E', abawdCList, abawdDList); getabawdName('E', abawdDList); checkMoreAbawd(abawdDList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdDrugTNext" onclick="buildAbawdArray('D','E', abawdCList, abawdDList); getabawdName('E', abawdDList); checkMoreAbawd(abawdDList);" value="No/Next">
                                 </div>
                                 <div id="abawdDBonus" style="display:none">
                                     <textarea type="textarea" id="whereTreatedAns" name="whereTreated" aria-label="Who is receiving treatment and what is the name of the program or facility?" placeholder="Who is receiving treatment and what is the name of the program or facility?" onkeyup="auto_grow(this)"></textarea>
                                 </div>
                                 <div id="abawdDivE0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdEmp30">Is anyone in the household employed, self-employed, volunteering, working minimum of <strong>30</strong> hours weekly or earning weekly wages at least equal to $<span id="incomeSpan"></span>, or monthly $<span id="monthlySpan"></span>. Can be paid or in-kind <strong>(AGPI 21)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdEmp30">Is anyone in the household employed, self-employed, volunteering, working minimum of <strong>120</strong> hours monthly or earning monthly wages at least equal to <strong>$<span id="monthlySpan"></span></strong>. Can be paid or in-kind <strong>(AGPI 21)</strong>:</p>
                                     <label for="abawdEName0" id="abawdELabel0"></label>
                                     <input type="checkbox" id="abawdEName0">
                                 </div>
                                 <div id="abawdENextDiv" style="display: none">
-                                    <input type="button" id="abawdEmp30Next" onclick="buildAbawdArray('E','F', abawdDList, abawdEList); getabawdName('F', abawdEList); checkMoreAbawd(abawdEList); abawdHourChangeCheck(abawdDList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdEmp30Next" onclick="buildAbawdArray('E','F', abawdDList, abawdEList); getabawdName('F', abawdEList); checkMoreAbawd(abawdEList); abawdHourChangeCheck(abawdDList);" value="No/Next">
                                 </div>
                                 <div id="abawdEBonus" style="display:none">
                                     <textarea type="textarea" id="30HourDisc" name="30Hour" aria-label="If the member is meeting this requirement by volunteering, enter the name of the member and a discussion of their volunteering.  Otherwise leave this section blank." placeholder="If the member is meeting this requirement by volunteering, enter the name of the member and a discussion of their volunteering.  Otherwise leave this section blank." onkeyup="auto_grow(this)"></textarea>
@@ -401,19 +401,19 @@
                                     <input type="checkbox" id="abawdFName0">
                                 </div>
                                 <div id="abawdFNextDiv" style="display: none">
-                                    <input type="button" id="abawdStuNext" onclick="buildAbawdArray('F','G', abawdEList, abawdFList); getabawdName('G', abawdFList); checkMoreAbawd(abawdFList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdStuNext" onclick="buildAbawdArray('F','G', abawdEList, abawdFList); getabawdName('G', abawdFList); checkMoreAbawd(abawdFList);" value="No/Next">
                                 </div>
                                 <div id="abawdDivG0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdUnfit">Is anyone in the household unable to work at least 20 hours per week, averaged monthly, as a result of being physically or mentally unfit or pending for SSI/SSDI or some other type of disability (temporary or permanent) <strong>(AGPI 15)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdUnfit">Is anyone in the household unable to work at least 80 hours per month as a result of being physically or mentally unfit or pending for SSI/SSDI or some other type of disability (temporary or permanent) <strong>(AGPI 15)</strong>:</p>
                                     <label for="abawdGName0" id="abawdGLabel0"></label>
                                     <input type="checkbox" id="abawdGName0" onclick="showMe('unfitDur', this)">
                                 </div>
                                 <div id="abawdGNextDiv" style="display: none">
-                                    <input type="button" id="abawdUnfitNext" onclick="buildAbawdArray('G','H', abawdFList, abawdGList); getabawdName('H', abawdGList); checkMoreAbawd(abawdGList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdUnfitNext" onclick="buildAbawdArray('G','H', abawdFList, abawdGList); getabawdName('H', abawdGList); checkMoreAbawd(abawdGList);" value="No/Next">
                                 </div>
                                 <div id="abawdGBonus" style="display:none">
-                                    <textarea type="textarea" id="unfitDurDate" name="unfitDurDate" aria-label="Who is the unfit individual and what is the expected end date of the unfitness?  Indicate if the member is pending for SSI/SSDI and the date of application, if applicable." placeholder="Who is the unfit individual and what is the expected end date of the unfitness?  Indicate if the member is pending for SSI/SSDI and the date of application, if applicable." onkeyup="auto_grow(this)"></textarea>
+                                    <textarea type="textarea" id="unfitDurDate" name="unfitDurDate" aria-label="Who is the unfit individual?  What is the condition and expected end date of the unfitness?  Indicate if the member is pending for SSI/SSDI and the date of application, if applicable." placeholder="Who is the unfit individual?  What is the condition and expected end date of the unfitness?  Indicate if the member is pending for SSI/SSDI and the date of application, if applicable." onkeyup="auto_grow(this)"></textarea>
                                 </div>
                                 <div id="abawdDivH0" style="display: none">
                                     
@@ -422,23 +422,23 @@
                                     <input type="checkbox" id="abawdHName0">
                                 </div>
                                 <div id="abawdHNextDiv" style="display: none">
-                                    <input type="button" id="abawdPregNext" onclick="buildAbawdArray('H','I', abawdGList, abawdHList); getabawdName('I', abawdHList); checkMoreAbawd(abawdHList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdPregNext" onclick="buildAbawdArray('H','I', abawdGList, abawdHList); getabawdName('I', abawdHList); checkMoreAbawd(abawdHList);" value="No/Next">
                                 </div>
                                 <div id="abawdDivI0" style="display: none">
                                     
-                                    <p class="abawdLabel" id="abawdEmp20">Is anyone in the household employed, self-employed, or volunteering, working minimum of <strong>20</strong> hours weekly, averaged 80 hours monthly? Can be paid or in-kind. <strong>(AGPI 18 N)</strong>:</p>
+                                    <p class="abawdLabel" id="abawdEmp20">Is anyone in the household employed, self-employed, or volunteering, working minimum of <strong>80</strong> hours per month? Can be paid or in-kind. <strong>(AGPI 18 N)</strong>:</p>
                                     <label for="abawdIName0" id="abawdILabel0"></label>
                                     <input type="checkbox" id="abawdIName0" onclick="showMe('abawdHBonus', this)">
                                 </div>
                                 <div id="abawdINextDiv" style="display: none">
-                                    <input type="button" id="abawdINext" onclick="abawdHourChangeCheck(abawdHList); buildAbawdMems(abawdHList);" value="No/Next">
+                                    <input type="button" class="next" id="abawdINext" onclick="abawdHourChangeCheck(abawdHList); buildAbawdMems(abawdHList);" value="No/Next">
                                 </div>
                                 <div id="abawdIBonus" style="display:none">
                                     <textarea type="textarea" id="20HourDisc" name="20Hour" aria-label="If the member is meeting this requirement by volunteering, enter the name of the member and a discussion of their volunteering.  Otherwise leave this section blank." placeholder="If the member is meeting this requirement by volunteering, enter the name of the member and a discussion of their volunteering.  Otherwise leave this section blank." onkeyup="auto_grow(this)"></textarea>
                                 </div>
                                 <div id="abawdWorking" style="display: none">
                                     <fieldset>
-                                        <legend> Was the customer advised that they must report if their weekly hours drop below 20 hours per week, averaged monthly: </legend>
+                                        <legend> Was the customer advised that they must report if their hours drop below 80 hours per month: </legend>
                                         <label class="hrChg" type="radio" for="abawdHourChangeYes" id="abawdHourChange" name="abawdHrChange">Yes</label>
                                         <input class="hrChg" type="radio" id="abawdHourChangeYes" name="abawdHrChange">
                                         <label class="hrChg" type="radio" for="abawdHourChangeNo" id="abawdHourChange" name="abawdHrChange">No</label>
@@ -475,17 +475,14 @@
                             </fieldset>
                             
                             <div id="retroMedicaid1" style="display:none">
-                                <input type="text" name="retroMedicaid" aria-label="Enter member name and months requested." placeholder="Enter member name and months requested." style="width: 500px;">
+                                <input type="text" id="retroMedicaidTxt" name="retroMedicaidTxt" aria-label="Enter member name and months requested." placeholder="Enter member name and months requested." style="width: 500px;">
                             </div>
                             <div id="dddScreening" style="display:none">
                                 <p id="recvDisab" name="disabScreen" style='display: "inline-block"'>Does anyone already receive Supplemental Security Income (SSI) benefits or Social Security Disability (SSDI) benefits:</p>
                                 <div id="dddQuest1">
                                 </div>
-                                <p id="pendDisab" name="disabScreen">Does anyone have an application pending for SSI or SSDI:</p>
+                                <p id="appealDisab" name="disabScreen">Does anyone have an appeal pending or under reconsideration with the Social Security Administration within the last year:</p>
                                 <div id="dddQuest2">
-                                </div>
-                                <p id="appealDisab" name="disabScreen">Does anyone have an appeal pending or under reconsideration with the Social Security Administration:</p>
-                                <div id="dddQuest3">
                                 </div>
                             </div>
                             
@@ -537,7 +534,7 @@
                                     <input type="radio" id="deductNo" name="deductApp" value="No">
                                 </fieldset>
                                 
-                                <textarea type="textarea" id="taxDeductions" aria-label="Discuss any discrepancies with reported deductions." placeholder="Discuss any discrepancies with reported deductions." rows="4" onkeyup="auto_grow(this)"></textarea>
+                                <textarea type="textarea" id="taxDeductions" aria-label="Discuss any discrepancies with reported deductions." placeholder="Discuss any discrepancies with reported deductions." rows="2" onkeyup="auto_grow(this)"></textarea>
                                 
                                 <fieldset>
                                     <legend> Tax filer claiming everyone in the HH as their tax dependent: </legend>
@@ -619,7 +616,7 @@
                                     <input type="checkbox" id="pip" value="PIP" name="tplTypes">
                                 </fieldset>
                                 
-                                <textarea type="textarea" name="3rdPtyDis" id="3rdPtyDisDisc" aria-label="Enter any discrepant or unreported 3rd party insurance information." placeholder="Enter any discrepant or unreported 3rd party insurance information."></textarea>
+                                <textarea type="textarea" name="3rdPtyDis" id="3rdPtyDisDisc" aria-label="List all HH members covered by TPL.  Enter any discrepant or unreported 3rd party insurance information." placeholder="List all HH members covered by TPL.  Enter any discrepant or unreported 3rd party insurance information."></textarea>
                             </div>
                             
                         </div>
@@ -662,7 +659,7 @@
                             <textarea name="immunizedChildDesc" id="immunChildDesc" rows="1" aria-label="Enter the name of the child(ren) and reason why they are not current." placeholder="Enter the name of the child(ren) and reason why they are not current." style="display: none;" onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
-                                <legend> Is applicant a teen parent: </legend>
+                                <legend> Are benefits being requested for a Teen Parent: </legend>
                                 <label for="teenParentYes" name="teenParent">Yes</label>
                                 <input type="radio" id="teenParentYes" name="teenParent" value="Yes" onclick="showMe('teenParentSchool', this)">
                                 <label for="teenParentNo" name="teenParent">No</label>
@@ -670,7 +667,7 @@
                             </fieldset>
                             <div id="teenParentSchool" style="display:none">
                                 
-                                <textarea type="textarea" id="teenParentSchoolDisc" aria-label="Enter name of school or GED program the teen parent attends. Discuss current living arrangement if there is no adult household member reported on application." placeholder="Enter name of school or GED program the teen parent attends. Discuss current living arrangement if there is no adult household member reported on application." rows="1" ></textarea>
+                                <textarea type="textarea" id="teenParentSchoolDisc" aria-label="Enter the name of school or GED program the teen parent attends. Enter name of protective payee or discussion of why a protective payee is not available. Discuss current living arrangement if there is no adult household member reported on application." placeholder="Enter the name of school or GED program the teen parent attends. Enter name of protective payee or discussion of why a protective payee is not available. Discuss current living arrangement if there is no adult household member reported on application." rows="1" ></textarea>
                             </div>
                             
                             <fieldset>
@@ -779,9 +776,9 @@
                                 <textarea type="textarea" id="rapSpouseName" aria-label="What is the spouse's name and where do they live." placeholder="What is the spouse's name and where do they live." rows="1" onkeyup="auto_grow(this)"></textarea>
                             </div>
                         </div>
-                        <div id="wrapUpArea" class="dynamicContent" style="display: none">
-                            <label type="textarea" id="addCommentLbl" for="addComment">Additional Comments:</label>
-                            <textarea class="householdDisc" type="textarea" name="addComments" id="addComment" rows="4" aria-label="Additional Comments: Check case for upcoming changes that might affect any exemptions or exceptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD." placeholder="Check case for upcoming changes that might affect any exemptions or exceptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD."
+                        <div id="wrapUpArea" class="dynamicContent1" style="display: none">
+                            <label type="textarea" id="addCommentLbl" for="addComment" class="addComm">Additional Comments:</label>
+                            <textarea class="householdDisc" type="textarea" name="addComments" id="addComment" rows="2" aria-label="Check case for upcoming changes that might affect any exemptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD." placeholder="Check case for upcoming changes that might affect any exemptions for all members.  If driver is run before interview this section must include a list of all items that must be explored with the applicant during the interview, including potential E&amp;T/ABAWD."
                                                         onkeyup="auto_grow(this)"></textarea>
                             
                             <fieldset>
@@ -794,7 +791,7 @@
                             
                             <div id="pendDet" style="display:none">
                                 <label type="textarea" id="pendingLbl" for="pending">Pending Items:</label>
-                                <textarea class="householdDisc" type="textarea" name="pendingItems" id="pending" rows="4" aria-label="Pending Items: Include a discussion of any pending information that is needed from the applicant." placeholder="Include a discussion of any pending information that is needed from the applicant."></textarea>
+                                <textarea class="householdDisc" type="textarea" name="pendingItems" id="pending" rows="2" aria-label="Pending Items: Include a discussion of any pending information that is needed from the applicant." placeholder="Include a discussion of any pending information that is needed from the applicant."></textarea>
                                 
                                 <label for="datePend">Pending Due:</label>
                                 <input type=date id="datePend" name="datePend" placeholder="mm/dd/ccyy">
@@ -814,12 +811,12 @@
                             <input type="text" id="workerId">
                         </div>
                         <div id="clrcPasteInfo" style="display: none">
-                            <input type="button" id="getData" onclick="checkDDD(); getCLRCText();" value="Build CLRC Note">
+                            <input type="button" class="genBtn"id="getData" onclick="checkDDD(); getCLRCText();" value="Build CLRC Note">
                             
                             <textarea class="householdDisc" id="clrcInfo" style="display: none;" onfocus="auto_grow(this)" readonly aria-label="CLRC Note to copy & paste into FLORIDA"></textarea>
                             <div class="row">
                                 <div class="column small-12">
-                                    <input type="button" id="copyText" onclick="copyCLRCtext ();" value="Copy CLRC Text">
+                                    <input type="button" class="genBtn"id="copyText" onclick="copyCLRCtext ();" value="Copy CLRC Text">
                                 </div><!--end column-->
                             </div><!--end row-->
                             <div class="row">
